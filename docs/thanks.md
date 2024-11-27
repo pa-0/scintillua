@@ -27,6 +27,7 @@ and better over the years.
 * Ivan Baidakou
 * Jason Schindler
 * Jeff Stone
+* John Benediktsson
 * Jonathon Levi
 * Joseph Eib
 * Joshua Krämer
@@ -59,6 +60,7 @@ and better over the years.
 * Robert Gieseke
 * Roberto Ierusalimschy
 * S\. Gilles
+* Samuel Marquis
 * Simeon Maryasin
 * Snoopy
 * Stéphane Rivière

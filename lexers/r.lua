@@ -5,24 +5,24 @@ local lexer = require('lexer')
 local token, word_match = lexer.token, lexer.word_match
 local P, S = lpeg.P, lpeg.S
 
-local lex = lexer.new('rstats')
+local lex = lexer.new('r')
 
 -- Whitespace.
 lex:add_rule('whitespace', token(lexer.WHITESPACE, lexer.space^1))
 
 -- Keywords.
 lex:add_rule('keyword', token(lexer.KEYWORD, word_match{
-  'break', 'else', 'for', 'if', 'in', 'next', 'repeat', 'return', 'switch', 'try', 'while', --
-  'Inf', 'NA', 'NaN', 'NULL', 'FALSE', 'TRUE', 'F', 'T',
-  -- Frequently used operators.
-  '|>', '%%', '%*%', '%/%', '%in%', '%o%', '%x%'
+	'break', 'else', 'for', 'if', 'in', 'next', 'repeat', 'return', 'switch', 'try', 'while', --
+	'Inf', 'NA', 'NaN', 'NULL', 'FALSE', 'TRUE', 'F', 'T',
+	-- Frequently used operators.
+	'|>', '%%', '%*%', '%/%', '%in%', '%o%', '%x%'
 }))
 
 -- Types.
 lex:add_rule('type', token(lexer.TYPE, word_match{
-  'array', 'character', 'closure', 'complex', 'data.frame', 'double', 'environment', 'expression',
-  'externalptr', 'factor', 'function', 'integer', 'list', 'logical', 'matrix', 'numeric',
-  'pairlist', 'promise', 'raw', 'symbol', 'vector'
+	'array', 'character', 'closure', 'complex', 'data.frame', 'double', 'environment', 'expression',
+	'externalptr', 'factor', 'function', 'integer', 'list', 'logical', 'matrix', 'numeric',
+	'pairlist', 'promise', 'raw', 'symbol', 'vector'
 }))
 
 -- Identifiers.
